@@ -1,0 +1,23 @@
+name: ${project.name}
+version: ${project.version}
+author: totemo
+authors: []
+description: ${project.description}
+website: ${project.url}
+main: testdropchances.TestDropChances
+api-version: 1.13
+
+permissions:
+  testdropchances.use:
+    description: Permission to use /testdropchances.
+    default: op
+
+commands:
+  testdropchances:
+    description: Spawn a test mob with low health and specified drop chances.
+    permission: testdropchances.use
+    usage: |
+
+      §e/<command> <main> [<off> <boots> <leggings> <chestplate> <helmet>]§f 
+        - Spawn a low-health test mob. All arguments are drop chances in the range [0.0,1.0]. If only the main hand drop chance is specified, all drop chances are set to that. Otherwise, all drop chances must be provided.
+
